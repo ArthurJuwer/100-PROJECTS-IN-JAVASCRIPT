@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+body{
+    background-color: #806AFA;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    background-color: #FFFFFF ;
+    width: 480px;
+    height: 325px;
+    padding: 15px;
+    border-radius: 25px;
+
+
+    .box-title{
+        padding-top: 15px;
+        padding-bottom: 15px;
+        text-align: center;
+        color: #2C3035;
+    }
+    .box-input-generator{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        input{
+            margin: 15px 0px;
+            padding-left: 25px;
+            width: 90%;
+            height: 50px;
+            background: #e0dde0;
+            color: #5c5d5c;
+            font-size: 28px;
+            letter-spacing: 40px;
+            border: none;
+            border-radius: 10px;
+            pointer-events: none;
+        }
+        button{
+            position: absolute;
+            right: 10%;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+            background: #836BF8;
+            cursor: pointer;
+            
+        }
+        button:hover{
+            background: #9889e8;
+        }
+        img{
+            width: 24px;
+            height: 24px;
+        }
+    }
+    .box-input-tofill{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 0px;
+
+        input{
+            padding-left: 25px;
+            width: 90%;
+            height: 50px;
+            font-size: 17px;
+            outline: none;
+            border: 1px solid #abadae;
+            border-radius: 10px;
+        }
+    }
+    .box-submit{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        button{
+            margin: 15px 0px;
+            width: 90%;
+            height: 60px;
+            font-size: 16px;
+            border-radius: 10px;
+            background: #836BF8;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover{
+            background: #9889e8;
+        }
+    }
+}
