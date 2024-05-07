@@ -1,7 +1,7 @@
 let atualTime = document.querySelector(".timer input")
 
 let interval;
-let timeLeft = 62
+let timeLeft = 1500
 
 updateTimer()
 
