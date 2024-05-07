@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+body{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #eeebeb;
+}
+.container{
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 500px;
+    height: 200px;
+    border-radius: 25px;
+    padding: 25px;
+}
+.bar-text{
+    position: relative;
+    margin-top: 40px;
+    width: 310px;
+}
+
+.currentPercentage{
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+}
+.bar progress{
+    width: 350px;
+    height: 30px;
+    
+}
