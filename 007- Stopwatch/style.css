@@ -1,0 +1,56 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+body{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.stopwatch{
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    
+    input{
+        margin: 0px 3px;
+    }
+    input{
+        border: none;
+        width: 85px;
+        font-size: 60px;
+    }
+}
+span{
+    font-size: 30px;
+}
+#milliseconds{
+    font-size: 30px !important;
+}
+.buttonAction{
+    button{
+        margin: 20px 10px;
+        padding: 6px;
+        width: 100px;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+    }
+    button:hover{
+        opacity: 0.7;
+    }
+    #start{
+        background: green;
+    }
+    #pause{
+        background: grey;
+    }
+    #reset{
+        background: red;
+    }
+    
+}
