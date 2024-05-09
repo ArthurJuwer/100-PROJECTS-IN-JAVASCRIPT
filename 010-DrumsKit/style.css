@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+body{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.title{
+    margin-bottom: 10vh;
+}
+.buttonsAction{
+
+    button{
+        padding: 5px;
+        width: 125px;
+        height: 125px;
+        border: 1px solid #c6c4c4;
+        border-radius: 15px;
+        cursor: pointer;
+        margin: 0px 4px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+#hihats{
+    background-image: url(/010-DrumsKit/images/hihats.jpg);
+}
+#snare{
+    background-image: url(/010-DrumsKit/images/snare.jpg);
+}
+#hitom{
+    background-image: url(/010-DrumsKit/images/hitom.jpeg);
+}
+#sticks{
+    background-image: url(/010-DrumsKit/images/sticks.jpg);
+}
+#floortom{
+    background-image: url(/010-DrumsKit/images/floortom.jpg);
+}
+#bassdrum{
+    background-image: url(/010-DrumsKit/images/bassdrum.jpg);
+}
