@@ -2,12 +2,8 @@ class Playlist{
     constructor(autor, title, stage){
         this.autor = autor
         this.title = title
-        // this.description = description
 
         this.stage = stage
-
-        
-
     }
     create () {
         
@@ -27,9 +23,7 @@ const btnShowDialog = document.querySelector(".showDialog"),
  dialog = document.querySelector("dialog"),
  stage = document.querySelector(".container")
 
-let autorValue = document.querySelector("#autor")
-let titleValue = document.querySelector("#title")
-let descriptionValue = document.querySelector("#description")
+
  
 
 btnShowDialog.addEventListener("click",()=>{
@@ -43,23 +37,21 @@ btnCloseDialog.addEventListener("click",()=>{
     
 })
 btnSubmitDialog.addEventListener("click", ()=>{
+    let autorValue = document.querySelector("#autor"),
+    titleValue = document.querySelector("#title"),
+    descriptionValue = document.querySelector("#description")
     
     if(autorValue.value != '' && titleValue.value != '' && descriptionValue.value != ''){
         let playlist = new Playlist(autorValue.value,titleValue.value,stage )
         playlist.create()
         dialog.close()
-        valuesIsZero()
+        autorValue.value = ''
+        titleValue.value = ''
+        descriptionValue.value = ''
     }
     
     
     
     
 } )
-
-function valuesIsZero(){
-    autorValue.value = ''
-    titleValue.value = ''
-    descriptionValue.value = ''
-}
-
 
