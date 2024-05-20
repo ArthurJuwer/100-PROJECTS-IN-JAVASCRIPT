@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechanical System</title>
+    <link rel="stylesheet" href="/019-MechanicalSystem/style.css">
+    <script defer src="/019-MechanicalSystem/script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Vehicle Reception System</h1>
+    </header>
+    <section class="addVehicle">
+
+        <div class="addVehicle-header">
+            <input type="text" name="search" id="search" placeholder="Search...">
+            <input type="button" value="Register Vehicle" id="buttonRegister">
+        </div>
+        <div class="addVehicle-main">
+            <div class="box-addVehicle-main">
+                <label for="">Plate</label>
+                <input type="text" name="plate" id="plate" required>
+            </div>
+            <div class="box-addVehicle-main">
+                <label for="">Brand</label>
+                <input type="text" name="brand" id="brand">
+            </div>
+            <div class="box-addVehicle-main">
+                <label for="">Year</label>
+                <input type="text" name="year" id="year">
+            </div>
+            <div class="box-addVehicle-main">
+                <label for="">Date-Entry</label>
+                <input type="text" name="dateEntry" id="dateEntry">
+            </div>
+            <div class="box-addVehicle-main">
+                <label for="">Problem</label>
+                <input type="text" name="problem" id="problem">
+            </div>
+        </div>
+        <div class="addVehicle-footer">
+            <p>Stats: </p>
+            <div class="radiosQuest">
+                <input type="radio" name="quest" id="quest">
+                <label for="">Approved</label>
+                <input type="radio" name="quest" id="quest">
+                <label for="">Pending</label>
+            </div>
+        </div>
+    </section>
+    <section class="result">
+        <ul class="result-header">
+            <li>image</li>
+            <li>plate</li>
+            <li>brand</li>
+            <li>year</li>
+            <li>date-entry</li>
+            <li>problem</li>
+            <li>actions</li>
+        </ul>
+        
+        <section class="result-stage">
+            <!-- <ul class="result-content">
+            <li class="image">
+                <span></span>
+            </li>
+            <li>xyz123</li>
+            <li>Toyota</li>
+            <li>2019</li>
+            <li>22/03/2024</li>
+            <li>Motores superaquecidos</li>
+            <li class="actions">
+                <button onclick="toggleStatus(0)"> 
+                    <span class='color'></span>
+                    <div class="balao-mensagem">
+                        <p>Pending</p>
+                    </div>
+                </button>
+                <button onclick="removeItems(0)"> 
+                    <img src="/019-MechanicalSystem/images/trash.png" alt="">
+                </button>
+            </li>
+        </ul> -->
+        </section>
+        
+        
+    </section>
+</body>
+</html>
