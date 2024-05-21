@@ -12,42 +12,43 @@
         <h1>Vehicle Reception System</h1>
     </header>
     <section class="addVehicle">
-
-        <div class="addVehicle-header">
-            <input type="text" name="search" id="search" placeholder="Search...">
-            <input type="button" value="Register Vehicle" id="buttonRegister">
-        </div>
-        <div class="addVehicle-main">
-            <div class="box-addVehicle-main">
-                <label for="">Plate</label>
-                <input type="text" name="plate" id="plate" required>
+        <form id="form-add">
+            <div class="addVehicle-header">
+                <input type="text" name="search" id="search" placeholder="Search...">
+                <input type="submit" value="Register Vehicle" id="buttonRegister">
             </div>
-            <div class="box-addVehicle-main">
-                <label for="">Brand</label>
-                <input type="text" name="brand" id="brand">
+            <div class="addVehicle-main">
+                <div class="box-addVehicle-main">
+                    <label for="plate">Plate</label>
+                    <input type="text" name="plate" id="plate" placeholder="XXX0X00 / XXX0000" pattern="([a-zA-Z]{3}[0-9][a-zA-Z]{1}[0-9]{2}|[a-zA-Z]{3}[0-9]{4})" maxlength="7" required>
+                </div>
+                <div class="box-addVehicle-main">
+                    <label for="brand">Brand</label>
+                    <input type="text" name="brand" id="brand" required>
+                </div>
+                <div class="box-addVehicle-main">
+                    <label for="year">Year</label>
+                    <input type="text" name="year" id="year" required>
+                </div>
+                <div class="box-addVehicle-main">
+                    <label for="dateEntry">Date-Entry</label>
+                    <input type="text" name="dateEntry" id="dateEntry" pattern="\d{2}/\d{2}/\d{4}" placeholder="01/01/2024" minlength="10" maxlength="10" required>
+                </div>
+                <div class="box-addVehicle-main">
+                    <label for="problem">Problem</label>
+                    <input type="text" name="problem" id="problem" required>
+                </div>
             </div>
-            <div class="box-addVehicle-main">
-                <label for="">Year</label>
-                <input type="text" name="year" id="year">
+            <div class="addVehicle-footer">
+                <p>Stats: </p>
+                <div class="radiosQuest">
+                    <input type="radio" name="quest" id="quest-approved" value="Approved" required>
+                    <label for="quest-approved">Approved</label>
+                    <input type="radio" name="quest" id="quest-pending" value="Pending" required>
+                    <label for="quest-pending">Pending</label>
+                </div>
             </div>
-            <div class="box-addVehicle-main">
-                <label for="">Date-Entry</label>
-                <input type="text" name="dateEntry" id="dateEntry">
-            </div>
-            <div class="box-addVehicle-main">
-                <label for="">Problem</label>
-                <input type="text" name="problem" id="problem">
-            </div>
-        </div>
-        <div class="addVehicle-footer">
-            <p>Stats: </p>
-            <div class="radiosQuest">
-                <input type="radio" name="quest" id="quest">
-                <label for="">Approved</label>
-                <input type="radio" name="quest" id="quest">
-                <label for="">Pending</label>
-            </div>
-        </div>
+        </form>
     </section>
     <section class="result">
         <ul class="result-header">
@@ -59,32 +60,7 @@
             <li>problem</li>
             <li>actions</li>
         </ul>
-        
-        <section class="result-stage">
-            <!-- <ul class="result-content">
-            <li class="image">
-                <span></span>
-            </li>
-            <li>xyz123</li>
-            <li>Toyota</li>
-            <li>2019</li>
-            <li>22/03/2024</li>
-            <li>Motores superaquecidos</li>
-            <li class="actions">
-                <button onclick="toggleStatus(0)"> 
-                    <span class='color'></span>
-                    <div class="balao-mensagem">
-                        <p>Pending</p>
-                    </div>
-                </button>
-                <button onclick="removeItems(0)"> 
-                    <img src="/019-MechanicalSystem/images/trash.png" alt="">
-                </button>
-            </li>
-        </ul> -->
-        </section>
-        
-        
+        <section class="result-stage"></section>
     </section>
 </body>
 </html>
