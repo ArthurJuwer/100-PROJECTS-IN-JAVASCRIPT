@@ -23,7 +23,7 @@ function renderInfo() {
                 <img src="${item.imageSrc}" class="image-preview change-image" id="imagePreview-${index}" onclick="changeImage(${index})" style="display: ${item.imageSrc ? 'block' : 'none'};">
             </div>
         </li>
-        <li>${item.plate}</li>
+        <li class="plate">${item.plate}</li>
         <li>${item.brand}</li>
         <li>${item.year}</li>
         <li>${item.dateEntry}</li>
@@ -37,6 +37,9 @@ function renderInfo() {
             </button>
             <button onclick="removeItems(${index})"> 
                 <img src="/019-MechanicalSystem/images/trash.png" alt="Delete">
+            </button>
+            <button onclick="editItems(${index})"> 
+                <img src="/019-MechanicalSystem/images/edit.png" alt="Edit">
             </button>
         </li>
         `
@@ -58,6 +61,17 @@ function removeItems(index) {
 function toggleStatus(index) {
     items[index].statsChecked = (items[index].statsChecked === 'Pending') ? 'Approved' : 'Pending';
     items[index].statsColor = (items[index].statsChecked === 'Approved') ? 'green' : '#FFBF00';
+    renderInfo()
+}
+function editItems(index) {
+    items.forEach((item) =>{
+        plateInput.value = item.plate
+        brandInput.valu = item.brand
+        yearInput.value = item.year
+        dateEntryInput.value = item.dateEntry
+        problemInput.value = item.problem
+    })
+    items.splice(index, 1)    
     renderInfo()
 }
 
@@ -105,5 +119,35 @@ function changeImage(index) {
     label.style.display = 'flex' 
     imagePreview.style.display = 'none'
 }
+
+let searchInput = document.querySelector("#search")
+
+searchInput.addEventListener('input', ()=>{
+    // result-content
+    let allItems = document.querySelectorAll(".result-content")
+
+    let resultSearchToLower = searchInput.value.toUpperCase()
+
+    for(let item of allItems){
+        if(resultSearchToLower.value != ''){
+
+            let titlePlate = item.querySelector(".plate")
+
+            let titlePlateText = titlePlate.textContent.toUpperCase()
+
+            if(!titlePlateText.includes(resultSearchToLower)){
+                item.style.display = 'none' 
+            } else {
+                item.style.display = 'flex'
+            }
+        } else {
+            for(let item of allItems){
+                item.style.display = 'flex'
+            }
+        }
+
+    }
+})
+
 
 renderInfo();
